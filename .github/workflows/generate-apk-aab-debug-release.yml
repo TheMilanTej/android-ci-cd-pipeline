@@ -42,7 +42,18 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
-      # Run Tests Build
+      # Run Lint Check
+      - name: Run Lint Check
+        run: ./gradlew lint
+
+      # Upload Lint Report
+      - name: Upload Lint Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: app/build/reports/lint-results.html
+
+      # Run One Unit Test
       - name: Run gradle tests
         run: ./gradlew app:testDebugUnitTest
 
