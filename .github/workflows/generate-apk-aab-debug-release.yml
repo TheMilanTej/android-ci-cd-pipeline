@@ -8,7 +8,6 @@ env:
   playstore_name: Test ID
 
 on:
-
   push:
     branches:
       - 'main'
