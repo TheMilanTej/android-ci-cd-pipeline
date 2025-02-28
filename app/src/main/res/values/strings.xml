@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">cd-cd-pipeline-android</string>
+    <string name="app_version">App Version = %s</string>
 </resources>
